@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>SpatialKey Interview Exercise</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script>
+            /**
+            * We've hardcoded a simple (forced) auth call to get you a session,
+            * but feel free to replace this with your own implementation,
+            * a library, a framework, or whatever. No points docked
+            * if you leave this as is, we'd rather you spend time
+            * with the more interesting part of the app.
+            */
+            (function() {
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', 'https://hireme.spatialkey.com/SpatialKeyFramework/api/v2/session.json');
+                xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+
+                /***** IMPORTANT *****/
+                /**
+                * You will want to set .withCredentials to true on subsequent
+                * api calls to pass the session cookie.
+                */
+                xhr.withCredentials = true;
+
+                xhr.onload = function() {
+                    if(xhr.status !== 200) {
+                        alert('Ugh, the request failed :: ' + xhr.status);
+                    }
+                };
+
+                xhr.send(
+                    JSON.stringify({
+                        email: "ui-candidate@spatialkey.com",
+                        password: "skNewHire2017",
+                        orgName: "hireme"
+                    })
+                );
+            })();
+        </script>
+    </head>
+
+    <base href="/">
+    
+    <body>
+        <app>Loading RiskMap...</app>
+    </body>
+
+</html>

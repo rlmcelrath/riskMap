@@ -1,0 +1,9 @@
+<div class="map-container">
+    <div id="map" class="map">
+        <navigator></navigator>
+        <marker></marker>
+        <button class="btn btn-warning" 
+                [ngClass]="{'active': isLayerVisible}"
+                (click)="toggleLayer($event)">Toggle Risk Assessment Layer</button>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="report">
+    <div class="row">
+        <div class="navigator-wrapper col-xs-12 col-md-6">
+            <navigator (update)="locationChange($event)" [isMarker]=true></navigator>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <h1>{{ title }}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4">
+                            <div id="map" class="map"></div>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <label>U.S. Fema Flood Risk</label>
+                            <input [(ngModel)]="hazards.sk_custom_us_fema_flood_risk" readonly/>
+                            <label>Fema Flood Rank</label>
+                            <input [(ngModel)]="hazards.sk_custom_us_fema_flood_rank" readonly/>
+                            <label>Fema Flood Zone</label>
+                            <input [(ngModel)]="hazards.sk_custom_us_fema_flood_zone" readonly/>
+                            <label>Fema Flood Subzone</label>
+                            <input [(ngModel)]="hazards.sk_custom_us_fema_flood_subzone" readonly/>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <label>U.S. KatRisk 10meter Flood Label</label>
+                            <input [(ngModel)]="hazards.sk_custom_us_katrisk_10m_flood_label" readonly/>
+                            <label>U.S. KatRisk 10meter Flood Rank</label>
+                            <input [(ngModel)]="hazards.sk_custom_us_katrisk_10m_flood_rank" readonly/>
+                            <label>U.S. KatRisk 10meter Flood Return Period</label>
+                            <input [(ngModel)]="hazards.sk_custom_us_katrisk_10m_flood_return_period" readonly/>
+                            <label>U.S. KatRisk 10meter Flood Score</label>
+                            <input [(ngModel)]="hazards.sk_custom_us_katrisk_10m_flood_score" readonly/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
