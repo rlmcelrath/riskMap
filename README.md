@@ -10,7 +10,7 @@ I reorganized the file structure to be more feature based, the format I like to 
 
 See [**live demo**](https://haoliangyu.github.io/angular2-mapboxgl-starter/) for the original application.
 
-Working with [Angular 2 official release](https://github.com/angular/angular/blob/master/CHANGELOG.md#200-2016-09-14)!
+Working with angular.io (Angular2) (http://www.angular.io)
 
 ## How to set up
 
